@@ -23,3 +23,9 @@ func Read(file io.Reader) []byte {
 	}
 	return buf
 }
+
+func ReadFile(path string) []byte {
+	reader := openR(path)
+	buf := Read(reader)
+	return buf
+}
